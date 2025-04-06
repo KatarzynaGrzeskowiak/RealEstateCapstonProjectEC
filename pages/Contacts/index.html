@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="../../assets/icons/home_icon.png">
   <link rel="stylesheet" href="../../styles/main.css">
-  <title>EstateFinder</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <title>Contacts</title>
 </head>
 <body>
   <header>
     <div class="nav-container">
       <div class="logo-container">
-        <a href="index.html" class="logo">
+        <a href="../Home/index.html" class="logo">
           <img class="logo_img" src="../../assets/icons/home_icon.png" alt="home icon">
           <h1>EstateFinder</h1>
         </a>
@@ -25,7 +26,7 @@
         <nav>
           <ul class="nav-menu">
             <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
+              <a href="../Home/index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
               <a href="../Gallery/index.html" class="nav-link">Gallery</a>
@@ -35,13 +36,13 @@
               <div class="submenu">
                 <ul class="submenu-list">
                   <li class="submenu-item">
-                    <a href="../Contacts/index.html#form" class="submenu-link">Contact Form</a>
+                    <a href="#form" class="submenu-link">Contact Form</a>
                   </li>
                   <li class="submenu-item">
-                    <a href="../Contacts/index.html#map" class="submenu-link">Location</a>
+                    <a href="#map" class="submenu-link">Location</a>
                   </li>
                   <li class="submenu-item">
-                    <a href="../Contacts/index.html#social" class="submenu-link">Social Media</a>
+                    <a href="#social" class="submenu-link">Social Media</a>
                   </li>
                 </ul>
               </div>
@@ -52,7 +53,42 @@
     </div>
   </header>
   <main>
-    Image Slider
+    <div id="contacts-container">
+      <h2>Contact Us</h2>
+      <div class="contacts-content">
+        <div class="contact-info">
+          <div class="info-section">
+            <h3>Office Location</h3>
+            <p>123 Main Street</p>
+            <p>Warszawa, 00-001</p>
+            <p>Poland</p>
+          </div>
+          <div class="info-section">
+            <h3>Contact Details</h3>
+            <p>Phone: +48 123 456 789</p>
+            <p>Email: info@estatefinder.com</p>
+            <p>Hours: Mon-Fri 9:00-17:00</p>
+          </div>
+        </div>
+        <div id="map" class="map-container"></div>
+        <form id="contact-form" class="contact-form">
+          <h3>Send us a Message</h3>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
   </main>
   <footer>
     <div class="socials-container">
@@ -74,6 +110,7 @@
       <a class="made-text" href="https://github.com/KatarzynaGrzeskowiak" target="_blank">Made by Katarzyna Grześkowiak</a>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="contacts.js" type="module"></script>
 </body>
 </html>

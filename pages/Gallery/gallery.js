@@ -9,6 +9,7 @@ class Gallery {
         this.pageNumbers = this.pagination.querySelector('.page-numbers');
         this.showMoreBtn = this.grid.querySelector('.show-more-btn');
         this.searchInput = document.getElementById('search-input');
+        this.cityFilter = document.getElementById('city-filter');
         this.priceFilter = document.getElementById('price-filter');
         this.roomsFilter = document.getElementById('rooms-filter');
         this.sortBy = document.getElementById('sort-by');
@@ -39,6 +40,7 @@ class Gallery {
         this.searchInput.addEventListener('input', () => this.filterAndUpdate());
 
         // Filters
+        this.cityFilter.addEventListener('change', () => this.filterAndUpdate());
         this.priceFilter.addEventListener('change', () => this.filterAndUpdate());
         this.roomsFilter.addEventListener('change', () => this.filterAndUpdate());
 
@@ -77,17 +79,21 @@ class Gallery {
 
     filterAndUpdate() {
         const searchTerm = this.searchInput.value.toLowerCase();
+        const city = this.cityFilter.value;
         const priceRange = this.priceFilter.value;
         const rooms = this.roomsFilter.value;
-
+        
         this.filteredApartments = this.allApartments.filter(apartment => {
-            const matchesSearch = apartment.city.toLowerCase().includes(searchTerm);
+            const matchesSearch = 
+                apartment.city.toLowerCase().includes(searchTerm) || 
+                apartment.district.toLowerCase().includes(searchTerm);
+            const matchesCity = !city || apartment.city === city;
             const matchesPrice = !priceRange || this.matchesPriceRange(apartment.price, priceRange);
             const matchesRooms = !rooms || apartment.rooms === parseInt(rooms);
-
-            return matchesSearch && matchesPrice && matchesRooms;
+            
+            return matchesSearch && matchesCity && matchesPrice && matchesRooms;
         });
-
+        
         this.sortApartments();
         this.currentPage = 1;
         this.updateGallery();

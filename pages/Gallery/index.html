@@ -11,7 +11,7 @@
   <header>
     <div class="nav-container">
       <div class="logo-container">
-        <a href="index.html" class="logo">
+        <a href="../Home/index.html" class="logo">
           <img class="logo_img" src="../../assets/icons/home_icon.png" alt="home icon">
           <h1>EstateFinder</h1>
         </a>
@@ -56,10 +56,19 @@
       <h2>Our Apartments</h2>
       <div class="gallery-controls">
         <div class="search-box">
-          <input type="text" id="search-input" placeholder="Search apartments...">
+          <input type="text" id="search-input" placeholder="Search by city or district...">
         </div>
         <div class="filter-sort-container">
           <div class="filter-box">
+            <h3 class="filter-caption">Filters:</h3>
+            <select id="city-filter">
+              <option value="">All Cities</option>
+              <option value="Warszawa">Warszawa</option>
+              <option value="Kraków">Kraków</option>
+              <option value="Poznań">Poznań</option>
+              <option value="Wrocław">Wrocław</option>
+              <option value="Gdańsk">Gdańsk</option>
+            </select>
             <select id="price-filter">
               <option value="">Price Range</option>
               <option value="0-500000">Up to 500 000 PLN</option>
@@ -77,6 +86,7 @@
             </select>
           </div>
           <div class="sort-box">
+            <h3 class="sort-caption">Sort by:</h3>
             <select id="sort-by">
               <option value="price-asc">Price: Low to High</option>
               <option value="price-desc">Price: High to Low</option>
