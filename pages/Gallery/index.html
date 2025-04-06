@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="../../assets/icons/home_icon.png">
   <link rel="stylesheet" href="../../styles/main.css">
-  <title>Gallery - Apartments</title>
+  <title>Gallery</title>
 </head>
 <body>
   <header>
@@ -53,8 +53,47 @@
   </header>
   <main>
     <div id="gallery-container">
-      <h1>Gallery</h1>
-      <div class="gallery-grid"></div>
+      <h2>Our Apartments</h2>
+      <div class="gallery-controls">
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Search apartments...">
+        </div>
+        <div class="filter-sort-container">
+          <div class="filter-box">
+            <select id="price-filter">
+              <option value="">Price Range</option>
+              <option value="0-500000">Up to 500 000 PLN</option>
+              <option value="500000-800000">500 000 - 800 000 PLN</option>
+              <option value="800000-1200000">800 000 - 1 200 000 PLN</option>
+              <option value="1200000+">Above 1 200 000 PLN</option>
+            </select>
+            <select id="rooms-filter">
+              <option value="">Rooms</option>
+              <option value="1">1 Room</option>
+              <option value="2">2 Rooms</option>
+              <option value="3">3 Rooms</option>
+              <option value="4">4 Rooms</option>
+              <option value="5">5 Rooms</option>
+            </select>
+          </div>
+          <div class="sort-box">
+            <select id="sort-by">
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rooms-asc">Rooms: Low to High</option>
+              <option value="rooms-desc">Rooms: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-items"></div>
+        <div class="no-results-message">
+          <p>No apartments found matching your criteria.</p>
+          <p>Try adjusting your filters or search term.</p>
+        </div>
+        <button class="show-more-btn">Show More</button>
+      </div>
       <div class="pagination">
         <button class="pagination-btn prev" disabled>&lt; Previous</button>
         <div class="page-numbers"></div>

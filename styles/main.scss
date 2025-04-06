@@ -1,11 +1,12 @@
 // Variables
 $background-primary: rgb(34 193 195);
 $background-secondary: rgb(253 187 45);
-$submenu-color: rgb(217 173 78 / 90%);
+$mustard: rgb(217 173 78 / 90%);
 $secondary-color: #e6ef9d;
 $black: #000;
 $white: #fff;
 $primary-color: #333;
+$primary-color-hover: #222;
 $background-color: #fff;
 $slider-height: 500px;
 $slider-height-mobile: 300px;
@@ -117,7 +118,7 @@ h1 {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: $submenu-color;
+    background: $mustard;
     display: none;
     z-index: 1000;
     padding: 0.5rem 0;
@@ -270,7 +271,7 @@ h1 {
 
 // Main content styles
 main {
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem;
     background: $background-primary;
 }
 
@@ -307,6 +308,11 @@ footer {
 }
 
 /* fonts */
+
+h2{
+    margin-top: 0px;
+}
+
 p {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -476,6 +482,7 @@ p {
     padding: 2rem;
     box-sizing: border-box;
     color: $white;
+    text-align: center;
 
     @include responsive(mobile) {
         padding: 1rem;
@@ -504,40 +511,166 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    color: $white;
 
-    h1 {
+    h2 {
         text-align: center;
         margin-bottom: 2rem;
-        color: $text-color;
+        color: $white;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .gallery-controls {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .search-box {
+            input {
+                width: 100%;
+                padding: 0.75rem;
+                border: 1px solid rgba($white, 0.2);
+                border-radius: 4px;
+                background: rgba($white, 0.1);
+                color: $white;
+                font-size: 1rem;
+
+                &::placeholder {
+                    color: rgba($white, 0.5);
+                }
+            }
+        }
+
+        .filter-sort-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            .filter-box, .sort-box {
+                flex: 1;
+                min-width: 200px;
+
+                select {
+                    width: 100%;
+                    padding: 0.75rem;
+                    border: 1px solid rgba($white, 0.2);
+                    border-radius: 4px;
+                    background: rgba($white, 0.1);
+                    color: $white;
+                    font-size: 1rem;
+                    cursor: pointer;
+
+                    option {
+                        background: $mustard;
+                        color: $white;
+                    }
+                }
+            }
+        }
     }
 
     .gallery-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1rem;
+        gap: 1.5rem;
         margin-bottom: 2rem;
+        position: relative;
+
+        .gallery-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            grid-column: 1 / -1;
+        }
 
         .gallery-item {
             position: relative;
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
+            background: rgba($white, 0.1);
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
             transition: transform 0.3s ease;
 
             &:hover {
-                transform: scale(1.02);
+                transform: translateY(-5px);
             }
 
             img {
                 width: 100%;
-                height: 100%;
+                height: 300px;
                 object-fit: cover;
                 transition: opacity 0.3s ease;
 
                 &.loading {
                     opacity: 0;
+                }
+            }
+
+            .apartment-info {
+                padding: 1rem;
+                color: $white;
+
+                h3 {
+                    margin: 0 0 0.5rem 0;
+                    font-size: 1.25rem;
+                }
+
+                p {
+                    margin: 0 0 1rem 0;
+                    color: rgba($white, 0.8);
+                }
+
+                .apartment-details {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                    font-size: 0.9rem;
+                    color: rgba($white, 0.7);
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.25rem;
+                    }
+                }
+            }
+        }
+
+        .show-more-btn {
+            position: absolute;
+            right: 50%;
+            bottom: 0;
+            transform: translateY(100%);
+            margin: 1.5rem 0 15rem 0;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            background-color: $mustard;
+            color: $white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: $primary-color-hover;
+            }
+        }
+
+        .no-results-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            grid-column: 1 / -1;
+            color: $white;
+
+            p {
+                margin: 0.5rem 0;
+                font-size: 1.1rem;
+
+                &:first-child {
+                    font-size: 1.3rem;
+                    font-weight: 600;
                 }
             }
         }
@@ -548,23 +681,23 @@ body {
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        margin-top: 2rem;
+        margin: 2rem 0;
 
         .pagination-btn {
             padding: 0.5rem 1rem;
             border: none;
             border-radius: 4px;
-            background-color: $primary-color;
+            background-color: $mustard;
             color: $white;
             cursor: pointer;
             transition: background-color 0.3s ease;
 
             &:hover:not(:disabled) {
-                background-color: darken($primary-color, 10%);
+                background-color: $primary-color-hover;
             }
 
             &:disabled {
-                background-color: rgba($primary-color, 0.5);
+                background-color: rgba($mustard, 0.5);
                 cursor: not-allowed;
             }
         }
@@ -575,19 +708,43 @@ body {
 
             .page-number {
                 padding: 0.5rem 1rem;
-                border: 1px solid $primary-color;
+                border: 1px solid $mustard;
                 border-radius: 4px;
                 cursor: pointer;
                 transition: all 0.3s ease;
 
                 &:hover {
-                    background-color: rgba($primary-color, 0.1);
+                    background-color: rgba($mustard, 0.1);
                 }
 
                 &.active {
-                    background-color: $primary-color;
+                    background-color: $mustard;
                     color: $white;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+
+        .gallery-controls {
+            .filter-sort-container {
+                flex-direction: column;
+
+                .filter-box, .sort-box {
+                    width: 100%;
+                }
+            }
+        }
+
+        .gallery-grid {
+            .show-more-btn {
+                position: static;
+                transform: none;
+                margin: 1.5rem auto 0;
+                display: block;
+                width: fit-content;
             }
         }
     }

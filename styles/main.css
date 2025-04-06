@@ -227,7 +227,7 @@ h1 {
   }
 }
 main {
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   background: rgb(34, 193, 195);
 }
 
@@ -263,6 +263,10 @@ footer {
 }
 
 /* fonts */
+h2 {
+  margin-top: 0px;
+}
+
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -403,6 +407,7 @@ p {
   padding: 2rem;
   box-sizing: border-box;
   color: #fff;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .content-block {
@@ -421,6 +426,209 @@ p {
 body {
   overflow-x: hidden;
   min-width: 250px;
+}
+
+#gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #fff;
+}
+#gallery-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#gallery-container .gallery-controls {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#gallery-container .gallery-controls .search-box input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+#gallery-container .gallery-controls .search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+#gallery-container .gallery-controls .filter-sort-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+#gallery-container .gallery-controls .filter-sort-container .filter-box, #gallery-container .gallery-controls .filter-sort-container .sort-box {
+  flex: 1;
+  min-width: 200px;
+}
+#gallery-container .gallery-controls .filter-sort-container .filter-box select, #gallery-container .gallery-controls .filter-sort-container .sort-box select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#gallery-container .gallery-controls .filter-sort-container .filter-box select option, #gallery-container .gallery-controls .filter-sort-container .sort-box select option {
+  background: rgba(217, 173, 78, 0.9);
+  color: #fff;
+}
+#gallery-container .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+#gallery-container .gallery-grid .gallery-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  grid-column: 1/-1;
+}
+#gallery-container .gallery-grid .gallery-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+#gallery-container .gallery-grid .gallery-item:hover {
+  transform: translateY(-5px);
+}
+#gallery-container .gallery-grid .gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+#gallery-container .gallery-grid .gallery-item img.loading {
+  opacity: 0;
+}
+#gallery-container .gallery-grid .gallery-item .apartment-info {
+  padding: 1rem;
+  color: #fff;
+}
+#gallery-container .gallery-grid .gallery-item .apartment-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+#gallery-container .gallery-grid .gallery-item .apartment-info p {
+  margin: 0 0 1rem 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+#gallery-container .gallery-grid .gallery-item .apartment-info .apartment-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+#gallery-container .gallery-grid .gallery-item .apartment-info .apartment-details span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+#gallery-container .gallery-grid .show-more-btn {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  transform: translateY(100%);
+  margin: 1.5rem 0 15rem 0;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(217, 173, 78, 0.9);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+#gallery-container .gallery-grid .show-more-btn:hover {
+  background-color: #222;
+}
+#gallery-container .gallery-grid .no-results-message {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  grid-column: 1/-1;
+  color: #fff;
+}
+#gallery-container .gallery-grid .no-results-message p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+#gallery-container .gallery-grid .no-results-message p:first-child {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+#gallery-container .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+#gallery-container .pagination .pagination-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(217, 173, 78, 0.9);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#gallery-container .pagination .pagination-btn:hover:not(:disabled) {
+  background-color: #222;
+}
+#gallery-container .pagination .pagination-btn:disabled {
+  background-color: rgba(217, 173, 78, 0.5);
+  cursor: not-allowed;
+}
+#gallery-container .pagination .page-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+#gallery-container .pagination .page-numbers .page-number {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(217, 173, 78, 0.9);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#gallery-container .pagination .page-numbers .page-number:hover {
+  background-color: rgba(217, 173, 78, 0.1);
+}
+#gallery-container .pagination .page-numbers .page-number.active {
+  background-color: rgba(217, 173, 78, 0.9);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  #gallery-container {
+    padding: 1rem;
+  }
+  #gallery-container .gallery-controls .filter-sort-container {
+    flex-direction: column;
+  }
+  #gallery-container .gallery-controls .filter-sort-container .filter-box, #gallery-container .gallery-controls .filter-sort-container .sort-box {
+    width: 100%;
+  }
+  #gallery-container .gallery-grid .show-more-btn {
+    position: static;
+    transform: none;
+    margin: 1.5rem auto 0;
+    display: block;
+    width: fit-content;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

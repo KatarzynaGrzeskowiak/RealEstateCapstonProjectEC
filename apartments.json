@@ -2,7 +2,7 @@
     "apartments": [
         {
             "id": 1,
-            "city": "Warsaw",
+            "city": "Warszawa",
             "district": "Mokotów",
             "rooms": 3,
             "propertySize": 85,
@@ -36,7 +36,7 @@
         },
         {
             "id": 4,
-            "city": "Warsaw",
+            "city": "Warszawa",
             "district": "Żoliborz",
             "rooms": 2,
             "propertySize": 55,
@@ -70,7 +70,7 @@
         },
         {
             "id": 7,
-            "city": "Warsaw",
+            "city": "Warszawa",
             "district": "Praga-Południe",
             "rooms": 3,
             "propertySize": 90,
@@ -114,7 +114,7 @@
         },
         {
             "id": 11,
-            "city": "Warsaw",
+            "city": "Warszawa",
             "district": "Wilanów",
             "rooms": 5,
             "propertySize": 150,
