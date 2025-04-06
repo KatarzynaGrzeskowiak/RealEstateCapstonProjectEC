@@ -1,0 +1,138 @@
+{
+    "apartments": [
+        {
+            "id": 1,
+            "city": "Warsaw",
+            "district": "Mokotów",
+            "rooms": 3,
+            "propertySize": 85,
+            "price": 850000,
+            "images": [
+                "/assets/images/pic/1_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 2,
+            "city": "Kraków",
+            "district": "Kazimierz",
+            "rooms": 2,
+            "propertySize": 65,
+            "price": 720000,
+            "images": [
+                "/assets/images/pic/2_kitchen.jpg",
+                "/assets/images/pic/2_saloon.jpg"
+            ]
+        },
+        {
+            "id": 3,
+            "city": "Gdańsk",
+            "district": "Oliwa",
+            "rooms": 4,
+            "propertySize": 120,
+            "price": 1200000,
+            "images": [
+                "/assets/images/pic/3_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 4,
+            "city": "Warsaw",
+            "district": "Żoliborz",
+            "rooms": 2,
+            "propertySize": 55,
+            "price": 650000,
+            "images": [
+                "/assets/images/pic/4_kitchen.jpg",
+                "/assets/images/pic/4_saloon.jpg"
+            ]
+        },
+        {
+            "id": 5,
+            "city": "Poznań",
+            "district": "Jeżyce",
+            "rooms": 3,
+            "propertySize": 75,
+            "price": 780000,
+            "images": [
+                "/assets/images/pic/5_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 6,
+            "city": "Wrocław",
+            "district": "Stare Miasto",
+            "rooms": 1,
+            "propertySize": 35,
+            "price": 450000,
+            "images": [
+                "/assets/images/pic/6_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 7,
+            "city": "Warsaw",
+            "district": "Praga-Południe",
+            "rooms": 3,
+            "propertySize": 90,
+            "price": 920000,
+            "images": [
+                "/assets/images/pic/7_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 8,
+            "city": "Łódź",
+            "district": "Śródmieście",
+            "rooms": 2,
+            "propertySize": 60,
+            "price": 580000,
+            "images": [
+                "/assets/images/pic/8_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 9,
+            "city": "Kraków",
+            "district": "Podgórze",
+            "rooms": 4,
+            "propertySize": 130,
+            "price": 1400000,
+            "images": [
+                "/assets/images/pic/9_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 10,
+            "city": "Gdańsk",
+            "district": "Wrzeszcz",
+            "rooms": 2,
+            "propertySize": 70,
+            "price": 750000,
+            "images": [
+                "/assets/images/pic/10_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 11,
+            "city": "Warsaw",
+            "district": "Wilanów",
+            "rooms": 5,
+            "propertySize": 150,
+            "price": 1800000,
+            "images": [
+                "/assets/images/pic/11_kitchen.jpg"
+            ]
+        },
+        {
+            "id": 12,
+            "city": "Gdynia",
+            "district": "Śródmieście",
+            "rooms": 3,
+            "propertySize": 80,
+            "price": 950000,
+            "images": [
+                "/assets/images/pic/12_kitchen.jpg"
+            ]
+        }
+    ]
+}
