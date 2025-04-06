@@ -3,14 +3,22 @@
   "version": "1.0.0",
   "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass --watch ./styles/main.scss:styles/main.css ./pages/Contacts/style.scss:pages/Contacts/style.css ./pages/Gallery/style.scss:pages/Gallery/style.css"
+    "compile": "sass --watch ./styles/main.scss:styles/main.css",
+    "lint:js": "eslint \"**/*.js\"",
+    "lint:scss": "stylelint \"**/*.scss\"",
+    "lint": "npm run lint:js && npm run lint:scss"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.86.0"
+    "eslint": "^8.56.0",
+    "globals": "^13.24.0",
+    "sass": "^1.86.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard-scss": "^13.0.0"
   }
 }
