@@ -1,0 +1,40 @@
+// Variables
+$background-primary:rgb(34,193,195);
+$background-secondary:rgba(253,187,45,1);
+$secondary-color: #666;
+
+// Global styles
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    max-width: 1276px;
+    margin: 0 auto;
+}
+
+// Header styles
+header {
+    background: $background-primary;
+    background: linear-gradient(0deg, $background-primary 0%, $background-secondary 100%);
+    color: white;
+    padding: 2rem;
+    font-family: BillaBong;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.logo_img {
+    width: 40px;
+    height: 40px;
+}
+
+// Main content styles
+main {
+    padding: 2rem;
+}

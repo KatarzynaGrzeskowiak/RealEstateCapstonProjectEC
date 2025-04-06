@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass --watch pages/**/*.scss:pages/**/*.css"
+    "compile": "sass --watch ./styles/main.scss:styles/main.css ./pages/Contacts/style.scss:pages/Contacts/style.css ./pages/Gallery/style.scss:pages/Gallery/style.css"
   },
   "keywords": [],
   "author": "",
