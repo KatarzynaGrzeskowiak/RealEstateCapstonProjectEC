@@ -1,93 +1,54 @@
-# Capstone project template
+# What is it ?
+
+Here is a capstone project I made during participation in Front-End Q1 2025 epam course
+
+## Goal:
+My task was to create a web application using HTML, CSS, and JavaScript to practice your core web development skills. I was required to avoid using JavaScript frameworks (e.g., React, Angular) or CSS frameworks (e.g., Bootstrap).
 
 
+## Options:
+I could choose one of the following projects:
+Option 1: Online Learning Platform
+Create a web application for an online learning platform that allows users to browse and enroll in courses. The platform should include course information such as titles, instructors, difficulty levels, and topics, along with photos. Highlight user interactions by adding features like a course list, search functionality, and tools for exploring the course catalog. The landing page should feel visually organized with responsive layouts, a gallery for presenting course-related images, and intuitive navigation. Use interactive elements such as pagination, sorting, and filtering to help users explore course data efficiently.
 
-## Getting started
+Option 2: Real Estate Website
+Develop a web application for a real estate listing website where users can search properties available for sale or rent. The site should display detailed property information such as price, size, location, and amenities, along with photos. Enhance user experience by providing a dynamic gallery for property images, a search function to quickly find listings, and pagination to navigate between listing pages. A map should indicate the property location, making geographic information easily accessible. Ensure the layout is responsive and visually appealing on different devices.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+I choose Real Estate Website
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Data and assets:
+*	The data used in the application was created by me in JSON format. There was at least 11 items (elements), and the data was stored locally (not fetched from external APIs).
+*	Images in your project are free for using.
 
-## Add your files
+# Web Application Development
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+My web application follows the general requirements described below and structures my HTML, CSS, and JavaScript code effectively. The application uses HTML, CSS, and JavaScript to create a dynamic and user-friendly experience.
 
-```
-cd existing_repo
-git remote add origin https://autocode.git.epam.com/campus_javascript/javascript/fundamentals/capstone-project-template.git
-git branch -M main
-git push -uf origin main
-```
+## HTML & CSS part
 
-## Integrate with your tools
+*	Create semantic HTML markup using tags like <header>, <footer>, <article>, <nav>, <ul>, <li>, etc., for structured content organization.
 
-- [ ] [Set up project integrations](https://autocode.git.epam.com/campus_javascript/javascript/fundamentals/capstone-project-template/-/settings/integrations)
+*	Implement styles using Sass: utilize mixins, variables, and Sass inheritance to simplify and organize styles.
 
-## Collaborate with your team
+*	Apply Flexbox and/or CSS Grid layouts to arrange elements effectively.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+*	The “Home” page should contain an image slider and a navigation menu:
 
-## Test and Deploy
+*	Implement a submenu in the main menu using proper tags (<nav>, <ul>, <li>, <a>).
 
-Use the built-in continuous integration in GitLab.
+*	Ensure the menu block stretches across the available space (responsive design). If necessary, menu can be displayed on different devices in different ways.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+*	Ensure the web application is responsive: use media queries to adjust layout and styles so that the design works on all devices and avoids horizontal scrolling when resizing the browser window.
 
-***
+## JavaScript part
 
-# Editing this README
+*	Implement a "Gallery" page that displays a set of cards featuring courses or properties (depending on the selected project option). Each card should display an image with 300 x 300 px dimensions along with all relevant information provided in the data (JSON) file. Handle varying original image sizes by ensuring proper scaling or cropping.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+*	Add client-side pagination to display data page-by-page (maximum of 10 elements per page). Include navigation controls for users to access other pages. Additionally, implement asynchronous loading for elements that are initially hidden. These elements should load dynamically when the user clicks a “Show more” button.
 
-## Suggestions for a good README
+*	Add functionality to enable sorting and filtering of data on designated pages.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+*	Provide functionality to search information across the data provided.
 
-## Name
-Choose a self-explaining name for your project.
+*	Include a "Contacts" page with a map indicating a specific location. Use JavaScript to integrate a map service like Google Maps or OpenStreetMap.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
