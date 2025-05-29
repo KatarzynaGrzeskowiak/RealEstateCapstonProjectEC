@@ -19,8 +19,8 @@
             "propertySize": 65,
             "price": 720000,
             "images": [
-                "/assets/images/pic/2_kitchen.jpg",
-                "/assets/images/pic/2_saloon.jpg"
+                "../../assets/images/pic/2_kitchen.jpg",
+                "../../assets/images/pic/2_saloon.jpg"
             ]
         },
         {
@@ -31,7 +31,7 @@
             "propertySize": 120,
             "price": 1200000,
             "images": [
-                "/assets/images/pic/3_kitchen.jpg"
+                "../../assets/images/pic/3_kitchen.jpg"
             ]
         },
         {
@@ -42,8 +42,8 @@
             "propertySize": 55,
             "price": 650000,
             "images": [
-                "/assets/images/pic/4_kitchen.jpg",
-                "/assets/images/pic/4_saloon.jpg"
+                "../../assets/images/pic/4_kitchen.jpg",
+                "../../assets/images/pic/4_saloon.jpg"
             ]
         },
         {
@@ -54,7 +54,7 @@
             "propertySize": 75,
             "price": 780000,
             "images": [
-                "/assets/images/pic/5_kitchen.jpg"
+                "../../assets/images/pic/5_kitchen.jpg"
             ]
         },
         {
@@ -65,7 +65,7 @@
             "propertySize": 35,
             "price": 450000,
             "images": [
-                "/assets/images/pic/6_kitchen.jpg"
+                "../../assets/images/pic/6_kitchen.jpg"
             ]
         },
         {
@@ -76,7 +76,7 @@
             "propertySize": 90,
             "price": 920000,
             "images": [
-                "/assets/images/pic/7_kitchen.jpg"
+                "../../assets/images/pic/7_kitchen.jpg"
             ]
         },
         {
@@ -87,7 +87,7 @@
             "propertySize": 60,
             "price": 580000,
             "images": [
-                "/assets/images/pic/8_kitchen.jpg"
+                "../../assets/images/pic/8_kitchen.jpg"
             ]
         },
         {
@@ -98,7 +98,7 @@
             "propertySize": 130,
             "price": 1400000,
             "images": [
-                "/assets/images/pic/9_kitchen.jpg"
+                "../../assets/images/pic/9_kitchen.jpg"
             ]
         },
         {
@@ -109,7 +109,7 @@
             "propertySize": 70,
             "price": 750000,
             "images": [
-                "/assets/images/pic/10_kitchen.jpg"
+                "../../assets/images/pic/10_kitchen.jpg"
             ]
         },
         {
@@ -120,7 +120,7 @@
             "propertySize": 150,
             "price": 1800000,
             "images": [
-                "/assets/images/pic/11_kitchen.jpg"
+                "../../assets/images/pic/11_kitchen.jpg"
             ]
         },
         {
@@ -131,7 +131,7 @@
             "propertySize": 80,
             "price": 950000,
             "images": [
-                "/assets/images/pic/12_kitchen.jpg"
+                "../../assets/images/pic/12_kitchen.jpg"
             ]
         }
     ]
