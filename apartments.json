@@ -8,7 +8,7 @@
             "propertySize": 85,
             "price": 850000,
             "images": [
-                "../assets/images/pic/1_kitchen.jpg"
+                "../../assets/images/pic/1_kitchen.jpg"
             ]
         },
         {
