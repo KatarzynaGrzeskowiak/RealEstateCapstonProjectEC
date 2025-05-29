@@ -26,7 +26,7 @@ My web application follows the general requirements described below and structur
 
 ## HTML & CSS part
 
-*	Create semantic HTML markup using tags like <header>, <footer>, <article>, <nav>, <ul>, <li>, etc., for structured content organization.
+*	Create semantic HTML markup using tags like `<header>, <footer>, <article>, <nav>, <ul>, <li>,` etc., for structured content organization.
 
 *	Implement styles using Sass: utilize mixins, variables, and Sass inheritance to simplify and organize styles.
 
@@ -34,7 +34,7 @@ My web application follows the general requirements described below and structur
 
 *	The “Home” page should contain an image slider and a navigation menu:
 
-*	Implement a submenu in the main menu using proper tags (<nav>, <ul>, <li>, <a>).
+*	Implement a submenu in the main menu using proper tags (`<nav>, <ul>, <li>, <a>`).
 
 *	Ensure the menu block stretches across the available space (responsive design). If necessary, menu can be displayed on different devices in different ways.
 
