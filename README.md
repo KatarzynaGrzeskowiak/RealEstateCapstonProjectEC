@@ -2,6 +2,10 @@
 
 Here is a capstone project I made during participation in Front-End Q1 2025 epam course
 
+To see deployment check:
+
+https://katarzynagrzeskowiak.github.io/RealEstateCapstonProjectEC/pages/Home/index.html
+
 ## Goal:
 My task was to create a web application using HTML, CSS, and JavaScript to practice your core web development skills. I was required to avoid using JavaScript frameworks (e.g., React, Angular) or CSS frameworks (e.g., Bootstrap).
 
